@@ -21,7 +21,7 @@ public class Node {
                 left = new Node(valor);
                 left.parent = this;
             }
-        } else if (valor > this.data) {
+        } else {
             if (right != null) {
                 right = right.add(valor);
             } else {
@@ -36,7 +36,10 @@ public class Node {
         if (left != null) {
             left.show();
         }
-        System.out.println(data);
+        System.out.println("valor:"+ data );
+        if(color)System.out.println("red");
+        else System.out.println("black");
+
         if (right != null) {
             right.show();
         }
